@@ -1,0 +1,35 @@
+<div class="col-lg-6">
+        <h2 class="h1" data-i18n="contact.title">Contact</h2>
+
+        <!-- Formsubmit.co Integration -->
+        <form class="row g-2" action="https://formsubmit.co/harristane1@gmail.com" method="POST" target="_blank">
+          <!-- Optionen -->
+          <input type="hidden" name="_subject" value="Neue Nachricht von der Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://formsubmit.co/thanks.html">
+
+          
+          <div class="col-md-6">
+            <label for="name" class="form-label" data-i18n="contact.nameL">Nom</label>
+            <input id="name" class="form-control" type="text" name="name" placeholder="Votre nom" required>
+            <input type="text" name="_honey" style="display:none">
+
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label" data-i18n="contact.mailL">E-mail</label>
+            <input id="email" class="form-control" type="email" name="email" placeholder="vous@exemple.com" required>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label" data-i18n="contact.msgL">Message</label>
+            <textarea id="message" class="form-control" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-success" type="submit" data-i18n="contact.send">Envoyer</button>
+          </div>
+        </form>
+        
+      </div>
