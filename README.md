@@ -98,5 +98,3 @@ Bereich mit Links zu:
 
 ---
 
-## 📂 Projektstruktur
-
