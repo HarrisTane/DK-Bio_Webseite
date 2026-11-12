@@ -1,100 +1,38 @@
-# 🌿 DK Bio – Responsive Multi-Language Website
+# DK Bio
 
-Eine vollständig responsive, zweisprachige (FR/EN) Webseite für die Marke **DK Bio** – entwickelt mit **HTML, CSS, JavaScript und Bootstrap**.
+Statischer Produktkatalog auf Deutsch, Englisch und Französisch. Die deutsche
+Startseite ist `index.html`. Die anderen Sprachversionen liegen unter
+`en.html` und `fr.html`.
 
-🚀 **Live-Demo** (falls GitHub Pages genutzt wird):  
-https://<username>.github.io/<repository-name>/
+## Lokal öffnen
 
----
+Im entpackten Projektordner `python3 -m http.server 8000` starten.
+Dann http://localhost:8000 im Browser öffnen. Der Webserver dient der
+lokalen Vorschau.
 
-## 📝 Projektbeschreibung
+## Veröffentlichen
 
-Dieses Projekt ist eine professionelle Marken- und Produktwebseite für **DK Bio**, ein Unternehmen aus Kamerun, das nachhaltige und dehydrierte Lebensmittel herstellt.  
-Die Seite basiert vollständig auf **Bootstrap** und beinhaltet:
+Die Website benötigt statisches Hosting mit HTTPS und einer Weiterleitung
+von HTTP auf HTTPS. `_headers` konfiguriert die zusätzlichen Sicherheitsheader
+auf kompatiblen Hosts. Bei anderen Hosts die Regeln aus dieser Datei als
+HTTP-Antwortheader konfigurieren. Die Content Security Policy steht zusätzlich
+in den HTML-Seiten. Framing-Schutz greift über die HTTP-Antwortheader.
+Die 404-Seite erwartet eine Veröffentlichung im Stammverzeichnis der Domain.
+Bei einer Projekt-URL in einem Unterpfad die absoluten Pfade in `404.html`
+anpassen und den Host auf diese Fehlerseite konfigurieren.
 
-- Dynamische Navigation  
-- i18n-Sprachumschaltung (Französisch / Englisch)  
-- Theme-Umschalter (Dark/Light)  
-- Produkt- & Preistabellen  
-- Galerie  
-- Visuelle Platzhalter  
-- Kontaktinformationen  
-- Downloadbereich für Dokumente  
+Vor der Veröffentlichung die endgültige Domain für absolute Sprachalternativen,
+Canonical-URLs und Social-Media-Vorschaubilder eintragen. Datenschutzhinweise
+an das tatsächliche Hosting, die Serverprotokollierung und die Betreiberangaben
+anpassen. Betreiber- und Kontaktangaben anhand der Unternehmensdaten prüfen.
 
----
+## Inhalte pflegen
 
-## ✨ Features
+Texte parallel in den drei Sprachversionen aktualisieren.
+Bei Preisänderungen die Werte in allen drei Tabellen pflegen. Der Preisfilter läuft
+im Browser. Sprachwechsel, Katalog und Kontaktlinks funktionieren auch bei
+deaktiviertem JavaScript. Die Farbauswahl ist die einzige Einstellung, die
+die Website im lokalen Browserspeicher ablegt.
 
-### 🌍 Mehrsprachigkeit (FR/EN)
-
-Die gesamte Webseite kann per Klick zwischen **Französisch** und **Englisch** umgestellt werden.  
-Alle Texte werden dynamisch über `data-i18n` geladen.
-
-**Implementierung:**  
-- Wörterbuch + dynamischer DOM-Austausch in `script.js`
-
----
-
-### 🌓 Dark/Light Mode
-
-Automatischer Theme-Wechsel basierend auf:
-
-- Systempräferenz  
-- Benutzerwahl (wird in `localStorage` gespeichert)
-
-➡️ Nutzt das **Bootstrap-5.3 Theme System**.
-
----
-
-### 📱 100% Responsive
-
-Durch **Bootstrap 5.3.3** ist die gesamte Seite vollständig mobil optimiert.
-
----
-
-### 🖼️ Bilder, Galerie & Platzhalter
-
-Die Seite enthält mehrere Bild- und Galerie-Sektionen:
-
-- Hero-Bild  
-- Markenpräsentation  
-- Produktbilder  
-- Galerie  
-- Teamfoto  
-- Logo-Darstellung  
-
-Platzhalter passen sich automatisch dem Theme an  
-(über `.placeholder-photo` in `style.css`).
-
----
-
-### 📊 Preislisten
-
-Eine tabellarische Preisübersicht mit Bootstrap-Borders, optimiert für mobile Geräte.
-
----
-
-### 📄 Downloads
-
-Bereich mit Links zu:
-
-- Brandbook PDF (FR/EN)
-- Logo-Dateien
-- Galerie-Bildern
-
----
-
-## 🛠️ Verwendete Technologien
-
-| Technologie           | Zweck                                              |
-|----------------------|----------------------------------------------------|
-| **HTML5**            | Struktur der Webseite                              |
-| **CSS3 + Custom CSS**| Branding & Styling                                 |
-| **Bootstrap 5.3**    | Layout, Grid, Komponenten                          |
-| **Bootstrap Icons**  | Icons im gesamten Projekt                          |
-| **JavaScript (Vanilla)** | i18n, Theme-Umschaltung, Interaktionen      |
-| **localStorage**     | Speichert Dark/Light-Mode des Nutzers              |
-| **Responsive Images**| Optimierte Bilddarstellung                         |
-
----
-
+Die Website lädt Bootstrap-CSS lokal. Für Bilder nutzt sie WebP-Varianten
+unter `Image/web/`. Originalbilder und PDF-Dokumente liegen weiterhin im Projekt.

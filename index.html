@@ -1,102 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr" data-bs-theme="light">
+<html lang="de" data-bs-theme="light">
 
 <head>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DK Bio</title>
-  <meta name="description"
-    content="Mise en page responsive Bootstrap reproduisant fidèlement le flyer DK Bio, avec espaces réservés pour toutes les images." />
-  <meta name="Keywords"
-    content="DK Bio est une marque née au Cameroun qui promeut l'alimentation locale et durable, en réduisant le gaspillage grâce à la déshydratation." />
-  <meta name="keywords"
-    content="Fruits déshydratés, Légumes déshydratés, Feuilles déshydratées, Épices déshydratées, Poudres déshydratées, Déshydratation sur mesure, Alimentation durable, Agriculture locale, Réduction du gaspillage alimentaire, Cameroun, DK Bio, Poudre de bouillie" />
-  
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  
+  <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>DK Bio</title>
+<meta name="description" content="DK Bio aus Kamerun bietet getrocknete Früchte, Gemüse, Gewürze und Mehle an. Entdecken Sie unser Sortiment und unsere Preise.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DK Bio">
+<meta property="og:title" content="DK Bio">
+<meta property="og:description" content="DK Bio aus Kamerun bietet getrocknete Früchte, Gemüse, Gewürze und Mehle an. Entdecken Sie unser Sortiment und unsere Preise.">
+<meta property="og:locale" content="de_DE">
+<link rel="alternate" hreflang="de" href="./index.html"><link rel="alternate" hreflang="en" href="./en.html"><link rel="alternate" hreflang="fr" href="./fr.html"><link rel="alternate" hreflang="x-default" href="./index.html"><link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script src="script.js"></script>
+<link rel="stylesheet" href="bootstrap-5.3.5-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg bg-body border-bottom sticky-top px-0"><!-- px-0 entfernt Navbar-Padding -->
-    <div class="container-fluid px-1"><!-- statt p-0 reicht px-0 -->
-      <a class="navbar-brand d-flex align-items-center m-0 p-0 ps-0"
-        href="#home"><!-- ps-0: kein linker Innenabstand -->
-        <img src="Image/DK Bio Profile (2).svg" alt="DK Bio – Logo" class="d-block" style="height:120px; width:400;" />
-        <span class="badge rounded-pill text-bg-success">Bio</span>
-      </a>
-      <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
-        aria-controls="navMain" aria-label="Menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navMain" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto small fw-semibold align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.start" href="#home">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.brand" href="#presentation">Marque</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.vision" href="#vision-mission">Vision & Mission</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.logo" href="#logo">Logo</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.products" href="#products">Produits & Services</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.pricing" href="#pricing">Tarifs</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.imagery" href="#imagery">Imagerie & Usage</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.about" href="#about">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" data-i18n="nav.contact" href="#contact">Contact</a></li>
-
-          <!-- Sprachmenü -->
-          <li class="nav-item dropdown ms-lg-3">
-            <a class="nav-link dropdown-toggle" href="#" id="langMenu" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-translate me-1"></i><span data-i18n="nav.lang">FR</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langMenu">
-              <li><button class="dropdown-item" data-lang="fr">Français</button></li>
-              <li><button class="dropdown-item" data-lang="en">English</button></li>
-            </ul>
-          </li>
-
-          <!-- Theme Toggle -->
-          <li class="nav-item ms-lg-2">
-            <button id="themeToggle" class="btn btn-sm btn-outline-secondary" type="button"
-              aria-label="Basculer le thème">
-              <i class="bi bi-moon"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
+  <header class="site-header">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="container header-layout">
+    <a class="wordmark" href="#home">
+      <img src="favicon-32x32.png" alt="" width="32" height="32"> DK Bio
+    </a>
+    <div class="preferences">
+      
+      <nav class="language-links" aria-label="Sprache"><span lang="de" aria-current="page">Deutsch</span><a href="en.html" lang="en" hreflang="en" data-language-link>English</a><a href="fr.html" lang="fr" hreflang="fr" data-language-link>Français</a></nav><button id="theme-toggle" type="button" class="btn btn-outline-secondary" aria-pressed="false" hidden>Dunkelmodus</button>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="home" class="hero section">
+    <nav aria-label="Hauptnavigation">
+      <button id="menu-toggle" type="button" class="btn btn-outline-secondary" aria-controls="nav-links" aria-expanded="false" hidden>Menü</button>
+      <ul id="nav-links" class="nav-links"><li><a href="#products">Produkte und Leistungen</a></li><li><a href="#pricing">Preise</a></li><li><a href="#presentation">Marke</a></li><li><a href="#vision-mission">Vision und Mission</a></li><li><a href="#logo">Logo</a></li><li><a href="#imagery">Bilder und Verwendung</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#about">Über uns</a></li><li><a href="#contact">Kontakt</a></li></ul>
+    </nav>
+  </div>
+</header><main id="main" tabindex="-1"><header id="home" class="hero section">
     <div class="container">
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
-          <span class="badge badge-accent mb-2" data-i18n="hero.tag">Slogan</span>
-          <h1 class="display-5 fw-bold mb-3" data-i18n="hero.head">« Récolté avec Amour, Partagé avec le Monde »</h1>
-          <p class="lead" data-i18n="hero.lead">DK Bio est une marque née au Cameroun qui promeut l'alimentation locale
-            et durable, en réduisant le gaspillage grâce à la déshydratation.</p>
-          <div class="d-flex gap-2">
-            <a href="#products" class="btn btn-success" data-i18n="hero.ctaProducts"><i class="bi bi-basket2"></i> Nos
-              produits</a>
-            <a href="#pricing" class="btn btn-outline-success" data-i18n="hero.ctaPricing"><i
-                class="bi bi-cash-coin"></i> Tarifs</a>
+          <span class="badge badge-accent mb-2">DK Bio</span>
+          <h1 class="display-5 fw-bold mb-3">„Mit Liebe geerntet, mit der Welt geteilt“</h1>
+          <p class="lead">DK Bio ist eine kamerunische Marke für lokale, nachhaltige Lebensmittel. Durch das Trocknen machen wir Lebensmittel länger haltbar und reduzieren Abfälle.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#products" class="btn btn-success">Produkte ansehen</a>
+            <a href="#pricing" class="btn btn-outline-success">Preisliste</a>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="placeholder-photo">
-            <!-- Verwende beide Zeilen für getrennte Light/Dark-Logos -->
-            <img src="Image/recolt_avec _amour.jpeg" height="500" width="700" alt="DK Bio – Logo" />
+            <img src="Image/web/recolt-avec-amour-0.webp" height="1024" width="1280" alt="Illustration von DK Bio zur Ernte und zu lokalen Erzeugnissen" srcset="Image/web/recolt-avec-amour-0-small.webp 640w, Image/web/recolt-avec-amour-0.webp 1280w" sizes="(min-width: 992px) 50vw, 100vw" fetchpriority="high">
           </div>
         </div>
 
@@ -104,43 +58,32 @@
     </div>
   </header>
 
-  <!-- PRÉSENTATION DE LA MARQUE -->
   <section id="presentation" class="section bg-soft">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-7">
-          <h2 class="h1 mb-3" data-i18n="brand.title">Présentation des la marque</h2>
-          <p data-i18n="brand.p1"> Ce site Web constitue la pierre angulaire de notre identité et offre une
-            compréhension profonde de l'essence de DK Bio, avec les outils pour maintenir une présence forte et
-            cohérente.</p>
-          <p data-i18n="brand.p2">En 2022, DK Bio est né d'une vision simple : remodeler l'avenir de l'alimentation au
-            Cameroun en transformant le gaspillage en opportunité. Nous célébrons la richesse des produits locaux et les
-            pratiques durables.</p>
-          <div class="placeholder-photo ratio ratio-16x9 no-border" style="position:relative;">
-            <!-- Großes Bild -->
-            <img src="Image/slogan.jpg" alt=""
-              style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <h2 class="h1 mb-3">Unsere Marke</h2>
+          <p>DK Bio verarbeitet landwirtschaftliche Erzeugnisse aus Kamerun zu getrockneten Lebensmitteln.</p>
+          <p>DK Bio entstand 2022 aus der Idee, Lebensmittelverschwendung in Kamerun zu verringern und dabei das Potenzial heimischer Erzeugnisse zu nutzen. Wir setzen auf die Vielfalt lokaler Produkte und auf nachhaltige Anbaumethoden.</p>
+          <div class="placeholder-photo ratio ratio-16x9 no-border">
+            <img src="Image/web/slogan-1.webp" alt="" width="740" height="740" srcset="Image/web/slogan-1-small.webp 640w, Image/web/slogan-1.webp 740w" sizes="(min-width: 992px) 50vw, 100vw" loading="lazy" decoding="async">
 
-            <!-- Kleines Bild RECHTS OBEN -->
-            <img src="Image/DK Bio Profile (2).svg" alt="Overlay"
-              style="position:absolute; left:1rem; top:9rem; left:auto; width:140px; height:140px; object-fit:contain; border-radius:50%; box-shadow:0 .25rem .75rem rgba(0,0,0,.25);">
+            <img src="Image/DK%20Bio%20Profile%20(2).svg" alt="" width="550" height="400" class="brand-art brand-overlay" loading="lazy" decoding="async">
           </div>
 
 
-          <p data-i18n="brand.p3">Notre parcours est fait d'innovation et de durabilité. Rejoignez DK Bio pour
-            réimaginer l’alimentation de demain.</p>
+          <p>Innovation und Nachhaltigkeit prägen unsere Arbeit. Begleiten Sie DK Bio dabei, die Ernährung von morgen mitzugestalten.</p>
         </div>
         <div class="col-lg-5">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="brand.essence">Essence</h5>
-              <ul class="list-unstyled list-check">
-                <li><i class="bi bi-check-circle"></i><span data-i18n="brand.e1"> Innovation & Santé</span></li>
-                <li><i class="bi bi-check-circle"></i><span data-i18n="brand.e2"> Durabilité & Agriculture locale</span>
+              <h3 class="card-title h5">Unsere Werte</h3>
+              <ul>
+                <li><span>Innovation und Gesundheit</span></li>
+                <li><span>Nachhaltigkeit und lokale Landwirtschaft</span>
                 </li>
-                <li><i class="bi bi-check-circle"></i><span data-i18n="brand.e3"> Réduction du gaspillage
-                    alimentaire</span></li>
-                <li><i class="bi bi-check-circle"></i><span data-i18n="brand.e4"> Autonomisation des communautés</span>
+                <li><span>Weniger Lebensmittelverschwendung</span></li>
+                <li><span>Stärkung lokaler Gemeinschaften</span>
                 </li>
               </ul>
             </div>
@@ -150,83 +93,61 @@
     </div>
   </section>
 
-  <!-- VISION & MISSION -->
   <section id="vision-mission" class="section">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
-          <h2 class="h1" data-i18n="vm.visionTitle">Vision</h2>
-          <p class="quote" data-i18n="vm.vision"> "Transformer l'agriculture en pierre angulaire de la prospérité au
-            Cameroun, en créant des
-            emplois durables et en donnant à la prochaine génération les moyens de percevoir la véritable valeur de
-            l'agriculture locale. En
-            transformant notre abondance naturelle en une alimentation innovante et sans gaspillage, nous visons à
-            réduire la dépendance aux
-            importations étrangères et à construire un avenir où l'agriculture est chérie comme un trésor national,
-            alimentant à la fois
-            notre économie et nos communautés"
-          </p>
+          <h2 class="h1">Vision</h2>
+          <p class="quote">„Wir wollen die Landwirtschaft zu einer Grundlage für Wohlstand in Kamerun machen, langfristige Arbeitsplätze schaffen und der nächsten Generation den Wert des lokalen Anbaus vermitteln. Indem wir die Vielfalt unserer Ernten nutzen und Lebensmittel möglichst vollständig verarbeiten, wollen wir die Abhängigkeit von Importen verringern und die Wirtschaft und die Gemeinschaften vor Ort stärken.“</p>
         </div>
         <div class="col-lg-6">
-          <h2 class="h1" data-i18n="vm.missionTitle">Mission</h2>
-          <p class="quote" data-i18n="vm.mission">"Chez DK Bio, notre mission est de réduire le gaspillage alimentaire,
-            de créer des emplois durables et de promouvoir la valeur de l'agriculture locale au Cameroun. Grâce à des
-            techniques de conservation innovantes telles que la déshydratation, nous transformons les produits locaux en
-            aliments nutritifs et durables, renforçant ainsi les communautés et favorisant l'indépendance économique.
-            Nous sommes dédiés à la construction d'un avenir où la jeunesse camerounaise perçoit l'agriculture comme une
-            industrie précieuse et florissante, qui soutient à la fois l'environnement et l'autosuffisance de la
-            nation."
-          </p>
+          <h2 class="h1">Mission</h2>
+          <p class="quote">„Bei DK Bio wollen wir Lebensmittelverschwendung verringern, langfristige Arbeitsplätze schaffen und die lokale Landwirtschaft in Kamerun stärken. Durch Verfahren wie das Trocknen machen wir aus regionalen Erzeugnissen nahrhafte, haltbare Lebensmittel. So unterstützen wir lokale Gemeinschaften und fördern wirtschaftliche Eigenständigkeit. Wir möchten jungen Menschen zeigen, dass die Landwirtschaft eine Perspektive bietet und zugleich zum Umweltschutz und zur Selbstversorgung des Landes beitragen kann.“</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LOGO & SIGNIFICATION -->
   <section id="logo" class="section bg-soft-2">
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-5 ">
           <div class="border-radius border-success">
-            <!-- Verwende beide Zeilen für getrennte Light/Dark-Logos -->
-            <img src="Image/DK Bio Profile (2).svg" alt="DK Bio – Logo" class="img-contain logo-light" />
+            <img src="Image/DK%20Bio%20Profile%20(2).svg" alt="DK-Bio-Logo" class="img-contain logo-light brand-art" width="550" height="400" loading="lazy" decoding="async">
 
           </div>
         </div>
         <div class="col-lg-7">
-          <h2 class="h1 mb-3" data-i18n="logo.title">Logo & signification</h2>
+          <h2 class="h1 mb-3">Logo und Bedeutung</h2>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item" data-i18n="logo.l1">Symbole de la plante : croissance, renouveau, durabilité.
-            </li>
-            <li class="list-group-item" data-i18n="logo.l2">Ligne de sol brune : terre, stabilité, agriculture.</li>
-            <li class="list-group-item" data-i18n="logo.l3">Texte « DK Bio » : héritage (Dongmo Kafack) &
-              écoresponsabilité.</li>
-            <li class="list-group-item" data-i18n="logo.l4">Slogan : « Récolté avec Amour, Partagé avec le Monde ».</li>
+            <li class="list-group-item">Pflanze: Wachstum, Erneuerung und Nachhaltigkeit.</li>
+            <li class="list-group-item">Braune Bodenlinie: Erde, Stabilität und Landwirtschaft.</li>
+            <li class="list-group-item">Der Name „DK Bio“ steht für unsere Herkunft (Dongmo Kafack) und den verantwortungsvollen Umgang mit der Umwelt.</li>
+            <li class="list-group-item">Unser Leitspruch: „Mit Liebe geerntet, mit der Welt geteilt“.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUITS & SERVICES -->
   <section id="products" class="section">
     <div class="container">
-      <h2 class="h1 mb-4" data-i18n="prod.title">Nos produits & Services</h2>
+      <h2 class="h1 mb-4">Unsere Produkte und Leistungen</h2>
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.fruitTitle">Fruits déshydratés</h5>
-              <p data-i18n="prod.fruitDesc">Conservent les saveurs naturelles, vitamines et minéraux.</p>
+              <h3 class="card-title h5">Getrocknete Früchte</h3>
+              <p>Das Trocknen bewahrt natürliche Aromen, Vitamine und Mineralstoffe.</p>
               <div class="row row-cols-2 small">
-                <div class="col" data-i18n="prod.f1">Ananas</div>
-                <div class="col" data-i18n="prod.f2">Papayes</div>
-                <div class="col" data-i18n="prod.f3">Oranges</div>
-                <div class="col" data-i18n="prod.f4">Citrons</div>
-                <div class="col" data-i18n="prod.f5">Mangues</div>
-                <div class="col" data-i18n="prod.f6">Goyaves</div>
-                <div class="col" data-i18n="prod.f7">Noix de coco</div>
-                <div class="col" data-i18n="prod.f8">Bananes</div>
+                <div class="col">Ananas</div>
+                <div class="col">Papayas</div>
+                <div class="col">Orangen</div>
+                <div class="col">Zitronen</div>
+                <div class="col">Mangos</div>
+                <div class="col">Guaven</div>
+                <div class="col">Kokosnuss</div>
+                <div class="col">Bananen</div>
               </div>
             </div>
           </div>
@@ -234,12 +155,12 @@
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.vegTitle">Légumes déshydratés</h5>
-              <p data-i18n="prod.vegDesc">Idéaux pour soupes, ragoûts et autres plats.</p>
+              <h3 class="card-title h5">Getrocknetes Gemüse</h3>
+              <p>Ideal für Suppen, Eintöpfe und andere Gerichte.</p>
               <div class="row row-cols-2 small">
-                <div class="col" data-i18n="prod.v1">Tomates</div>
-                <div class="col" data-i18n="prod.v2">Carottes</div>
-                <div class="col" data-i18n="prod.v3">Pommes de terre</div>
+                <div class="col">Tomaten</div>
+                <div class="col">Karotten</div>
+                <div class="col">Kartoffeln</div>
               </div>
             </div>
           </div>
@@ -247,18 +168,18 @@
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.leafTitle">Feuilles déshydratées</h5>
+              <h3 class="card-title h5">Getrocknete Blätter</h3>
               <div class="row row-cols-2 small g-1">
-                <div class="col" data-i18n="prod.l1">Feuilles d’Eru</div>
-                <div class="col" data-i18n="prod.l2">Waterleaf</div>
-                <div class="col" data-i18n="prod.l3">Feuilles amères</div>
-                <div class="col" data-i18n="prod.l4">Okok</div>
-                <div class="col" data-i18n="prod.l5">Feuilles de manioc</div>
-                <div class="col" data-i18n="prod.l6">Feuilles de Djek</div>
-                <div class="col" data-i18n="prod.l7">Feuilles de laurier</div>
-                <div class="col" data-i18n="prod.l8">Citronnelle</div>
-                <div class="col" data-i18n="prod.l9">Moringa</div>
-                <div class="col" data-i18n="prod.l10">Papaye</div>
+                <div class="col">Eru-Blätter</div>
+                <div class="col">Waterleaf</div>
+                <div class="col">Bitterblätter</div>
+                <div class="col">Okok</div>
+                <div class="col">Maniokblätter</div>
+                <div class="col">Djek-Blätter</div>
+                <div class="col">Lorbeerblätter</div>
+                <div class="col">Zitronengras</div>
+                <div class="col">Moringa</div>
+                <div class="col">Papaya</div>
               </div>
             </div>
           </div>
@@ -266,13 +187,13 @@
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.spiceTitle">Épices déshydratées</h5>
+              <h3 class="card-title h5">Getrocknete Gewürze</h3>
               <div class="row row-cols-2 small g-1">
-                <div class="col" data-i18n="prod.s1">Mélanges d'épices locales</div>
-                <div class="col" data-i18n="prod.s2">Échalotes</div>
-                <div class="col" data-i18n="prod.s3">Poireaux</div>
-                <div class="col" data-i18n="prod.s4">Oignons</div>
-                <div class="col" data-i18n="prod.s5">Ail</div>
+                <div class="col">Lokale Gewürzmischungen</div>
+                <div class="col">Schalotten</div>
+                <div class="col">Lauch</div>
+                <div class="col">Zwiebeln</div>
+                <div class="col">Knoblauch</div>
               </div>
             </div>
           </div>
@@ -280,11 +201,11 @@
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.powderTitle">Poudres déshydratées</h5>
+              <h3 class="card-title h5">Mehle und Pulver</h3>
               <ul class="small mb-0">
-                <li data-i18n="prod.p1">Farine de manioc</li>
-                <li data-i18n="prod.p2">Poudre de bouillie fermentée</li>
-                <li data-i18n="prod.p3">Poudre de tomates</li>
+                <li>Maniokmehl</li>
+                <li>Pulver für fermentierten Getreidebrei</li>
+                <li>Tomatenpulver</li>
               </ul>
             </div>
           </div>
@@ -292,11 +213,9 @@
         <div class="col-md-6">
           <div class="card h-100 border-success">
             <div class="card-body">
-              <h5 class="card-title" data-i18n="prod.serviceTitle">Service à la clientèle</h5>
-              <p data-i18n="prod.serviceDesc">Déshydratation sur mesure : fruits, légumes, feuilles, rhizomes, épices.
-              </p>
-              <p class="small mb-0" data-i18n="prod.serviceNote">Apportez vos produits – nous déshydratons avec un
-                équipement haut de gamme.</p>
+              <h3 class="card-title h5">Trocknung auf Anfrage</h3>
+              <p>Wir trocknen Obst, Gemüse, Blätter, Wurzelstöcke und Gewürze nach Bedarf.</p>
+              <p class="small mb-0">Bringen Sie Ihre Erzeugnisse mit. Wir trocknen sie mit professionellen Geräten.</p>
             </div>
           </div>
         </div>
@@ -304,349 +223,294 @@
     </div>
   </section>
 
-  <!-- TARIFS -->
   <section id="pricing" class="section bg-soft">
     <div class="container">
-      <h2 class="h1 mb-4" data-i18n="price.title">Liste de prix</h2>
-      <div class="table-responsive">
-        <table class="table table-bordered table-striped align-middle price-table">
-          <thead class="table-light">
+      <h2 class="h1 mb-4" id="price-title">Preisliste</h2>
+      <div id="price-search" class="mb-3" hidden data-empty="Keine Produkte gefunden." data-count="Ergebnisse">
+<label for="price-query" class="form-label fw-semibold">Preisliste durchsuchen</label>
+<input id="price-query" type="search" class="form-control" aria-controls="price-results">
+<p id="price-status" class="small text-body-secondary mt-2 mb-0" role="status"></p>
+</div><div class="table-responsive" tabindex="0" role="region" aria-labelledby="price-title">
+        <table class="table table-bordered table-striped align-middle price-table" aria-labelledby="price-title">
+          <thead class="table-secondary">
             <tr>
-              <th data-i18n="price.col1">Catégorie</th>
-              <th data-i18n="price.col2">Article</th>
-              <th data-i18n="price.col3">Quantité</th>
-              <th data-i18n="price.col4">Prix</th>
+              <th scope="col">Kategorie</th>
+              <th scope="col">Artikel</th>
+              <th scope="col">Menge</th>
+              <th scope="col">Preis</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="price-results">
             <tr>
-              <td data-i18n="price.i14">Épices (poudre)</td>
-              <td data-i18n="price.i1">pour poulet</td>
+              <td>Gewürzpulver</td>
+              <td>Für Hähnchen</td>
               <td>500 g</td>
               <td>2000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i14">Épices (poudre)</td>
-              <td data-i18n="price.i2">pour poisson</td>
+              <td>Gewürzpulver</td>
+              <td>Für Fisch</td>
               <td>500 g</td>
               <td>2000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i15">Poudres déshydratées</td>
-              <td data-i18n="price.i3">Farine de manioc</td>
+              <td>Mehle und Pulver</td>
+              <td>Maniokmehl</td>
               <td>1 kg</td>
               <td>7000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i15">Poudres déshydratées</td>
-              <td data-i18n="price.i4">Poudre de bouillie fermentée</td>
+              <td>Mehle und Pulver</td>
+              <td>Pulver für fermentierten Getreidebrei</td>
               <td>1 kg</td>
               <td>7500 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i15">Poudres déshydratées</td>
-              <td data-i18n="price.i5">Poudre de tomates</td>
+              <td>Mehle und Pulver</td>
+              <td>Tomatenpulver</td>
               <td>250 g</td>
               <td>3500 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i16">Fruits déshydratés</td>
-              <td data-i18n="price.i6">Ananas (par tranche)</td>
+              <td>Getrocknete Früchte</td>
+              <td>Ananas (pro Scheibe)</td>
               <td>—</td>
               <td>80 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i16">Fruits déshydratés</td>
-              <td data-i18n="price.i7">Orange (par tranche)</td>
+              <td>Getrocknete Früchte</td>
+              <td>Orange (pro Scheibe)</td>
               <td>—</td>
               <td>40 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i16">Fruits déshydratés</td>
-              <td data-i18n="price.i8">Citron (par tranche)</td>
+              <td>Getrocknete Früchte</td>
+              <td>Zitrone (pro Scheibe)</td>
               <td>—</td>
               <td>40 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i17">Épices</td>
-              <td data-i18n="price.i9">Piment</td>
+              <td>Gewürze</td>
+              <td>Chili</td>
               <td>1 kg</td>
               <td>7500 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i17">Épices</td>
-              <td data-i18n="price.i10">Gingembre</td>
+              <td>Gewürze</td>
+              <td>Ingwer</td>
               <td>250 g</td>
               <td>3000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i18">Feuilles</td>
-              <td data-i18n="price.i11">Feuille de menthe</td>
+              <td>Blätter</td>
+              <td>Minzblätter</td>
               <td>250 g</td>
               <td>3000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i18">Feuilles</td>
-              <td data-i18n="price.i12">Ndolé (lavée, déshydratée, prête à l'emploi)</td>
+              <td>Blätter</td>
+              <td>Ndolé (gewaschen, getrocknet und gebrauchsfertig)</td>
               <td>250 g</td>
               <td>3000 FCFA</td>
             </tr>
             <tr>
-              <td data-i18n="price.i19">Service</td>
-              <td data-i18n="price.i13">Déshydratation (produits de 100 g)</td>
+              <td>Dienstleistung</td>
+              <td>Trocknung (für Produkte à 100 g)</td>
               <td>—</td>
               <td>1000 FCFA</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="small text-muted" data-i18n="price.note">Les prix des fruits déshydratés varient selon la teneur en eau
-        et la durée de séchage.</p>
+      <p class="small text-muted">Die Preise für getrocknete Früchte variieren je nach Wassergehalt und Trocknungsdauer.</p>
     </div>
   </section>
 
-  <!-- IMAGERIE & USAGE -->
   <section id="imagery" class="section">
     <div class="container">
-      <h2 class="h1 mb-4" data-i18n="img.title">Imagerie & usages produits</h2>
+      <h2 class="h1 mb-4">Produkte und Verwendung</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/poudre de bouillie.jpeg" alt="DK Bio – Logo" class="img-contain logo-light" />
+              <img src="Image/web/poudre-de-bouillie-4.webp" alt="Pulver für Getreidebrei" class="img-contain logo-light" width="1200" height="675" srcset="Image/web/poudre-de-bouillie-4-small.webp 640w, Image/web/poudre-de-bouillie-4.webp 1200w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="img.p1t">Poudre de bouillie</h5>
-              <p class="small mb-1" data-i18n="img.p1u"><strong>Utilisation :</strong> option saine pour le
-                petit-déjeuner.</p>
-              <p class="small" data-i18n="img.p1a"><strong>Avantages :</strong> nutritive, adaptée aux repas familiaux.
-              </p>
+              <h3 class="card-title h5">Pulver für Getreidebrei</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> für ein ausgewogenes Frühstück.</p>
+              <p class="small"><strong>Vorteile:</strong> nahrhaft und für Familienmahlzeiten geeignet.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/Flocon de fruit.jpeg" alt="DK Bio – Logo" class="img-contain logo-dark" />
+              <img src="Image/web/flocon-de-fruit-5.webp" alt="Fruchtflocken" class="img-contain logo-dark" width="900" height="601" srcset="Image/web/flocon-de-fruit-5-small.webp 640w, Image/web/flocon-de-fruit-5.webp 900w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="img.p2t">Fruits déshydratés</h5>
-              <p class="small mb-1" data-i18n="img.p2u"><strong>Utilisation :</strong> sublimer la saveur des cocktails
-                (ananas, orange, citron).</p>
-              <p class="small" data-i18n="img.p2a"><strong>Exemple :</strong> bars & restaurants.</p>
+              <h3 class="card-title h5">Getrocknete Früchte</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> für Cocktails mit Ananas, Orange oder Zitrone.</p>
+              <p class="small"><strong>Beispiel:</strong> für Bars und Restaurants.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/farine de manioc.jpeg" height="500" width="700" alt="DK Bio – Logo" />
+              <img src="Image/web/farine-de-manioc-6.webp" height="666" width="999" alt="Maniokmehl" srcset="Image/web/farine-de-manioc-6-small.webp 640w, Image/web/farine-de-manioc-6.webp 999w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="img.p3t">Farine de manioc</h5>
-              <p class="small mb-1" data-i18n="img.p3u"><strong>Utilisation :</strong> alternative sans gluten.</p>
-              <p class="small" data-i18n="img.p3a"><strong>Avantages :</strong> substitut à la farine de blé.</p>
+              <h3 class="card-title h5">Maniokmehl</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> als glutenfreie Alternative.</p>
+              <p class="small"><strong>Vorteile:</strong> kann Weizenmehl ersetzen.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/Fruits deshydrates.jpeg" height="400" alt="DK Bio – Logo"
-                class="img-contain logo-dark" />
+              <img src="Image/web/fruits-deshydrates-7.webp" height="850" alt="Getrocknete Früchte" class="img-contain logo-dark" width="1280" srcset="Image/web/fruits-deshydrates-7-small.webp 640w, Image/web/fruits-deshydrates-7.webp 1280w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="img.p4t">Flocons de fruits</h5>
-              <p class="small mb-1" data-i18n="img.p4u"><strong>Utilisation :</strong> mélange à grignoter ou pour les
-                repas.</p>
-              <p class="small" data-i18n="img.p4a"><strong>Avantages :</strong> riches en nutriments.</p>
+              <h3 class="card-title h5">Fruchtflocken</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> zum Knabbern oder als Zutat in Mahlzeiten.</p>
+              <p class="small"><strong>Vorteile:</strong> nährstoffreich.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/ndolet.jpeg" alt="DK Bio – Logo" class="img-contain logo-light" />
+              <img src="Image/web/ndolet-8.webp" alt="Ndolé-Blätter" class="img-contain logo-light" width="600" height="600" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="img.p5t">Feuilles de Ndolé (lavées & séchées)</h5>
-              <p class="small mb-1" data-i18n="img.p5u"><strong>Utilisation :</strong> feuilles prêtes à cuire.</p>
-              <p class="small" data-i18n="img.p5a"><strong>Avantages :</strong> gain de temps pour plats traditionnels.
-              </p>
+              <h3 class="card-title h5">Ndolé-Blätter (gewaschen und getrocknet)</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> küchenfertige Blätter zum Kochen.</p>
+              <p class="small"><strong>Vorteile:</strong> spart Zeit bei der Zubereitung traditioneller Gerichte.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="card h-100">
             <div class="placeholder-photo ratio ratio-4x3 card-img-top">
-              <img src="Image/farine de plantain.jpeg" height="500" width="600" alt="DK Bio – Logo"
-                class="img-contain logo-light" />
+              <img src="Image/web/farine-de-plantain-9.webp" height="1100" width="733" alt="Kochbananenmehl" class="img-contain logo-light" srcset="Image/web/farine-de-plantain-9-small.webp 640w, Image/web/farine-de-plantain-9.webp 733w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
-              <h5 class="card-title">Farine de plantain</h5>
-              <p class="small mb-1" data-i18n="img.p5u"><strong>Utilisation :</strong> feuilles prêtes à cuire.</p>
-              <p class="small" data-i18n="img.p5a"><strong>Avantages :</strong> gain de temps pour plats traditionnels.
-              </p>
-            </div>
+              <h3 class="card-title h5">Kochbananenmehl</h3>
+              <p class="small mb-1"><strong>Verwendung:</strong> zum Kochen und Backen.</p>
+              </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Galerie -->
-
   <section id="galerie" class="section bg-soft-2">
     <div class="container ">
-      <h2 class="h1 mb-2" data-i18n="galerie">Notre Galerie</h2>
-      <p class="mb-4 text-secondary" data-i18n="galerie.text">Garde-fous visuels pour une identité cohérente.</p>
+      <h2 class="h1 mb-2">Galerie</h2>
+      <p class="mb-4 text-secondary">Frische und getrocknete Erzeugnisse.</p>
 
       <div class="row g-3 mb-3">
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/ananas sechée.jpeg" alt="DK Bio – Galerie 1" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/ananas-sech-e-10.webp" alt="Getrocknete Ananas" loading="lazy" width="1100" height="1100" srcset="Image/web/ananas-sech-e-10-small.webp 640w, Image/web/ananas-sech-e-10.webp 1100w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/mangue séchée.jpeg" alt="DK Bio – Galerie 2" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/mangue-s-ch-e-11.webp" alt="Getrocknete Mango" loading="lazy" width="540" height="360" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/citron séché.jpeg" alt="DK Bio – Galerie 3" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/citron-s-ch-12.webp" alt="Getrocknete Zitrone" loading="lazy" width="1100" height="1100" srcset="Image/web/citron-s-ch-12-small.webp 640w, Image/web/citron-s-ch-12.webp 1100w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
-          <div class="place7holder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/Ananas sec.jpeg" alt="DK Bio – Galerie 4" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+          <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
+            <img src="Image/web/ananas-sec-13.webp" alt="Getrocknete Ananasscheiben" loading="lazy" width="1200" height="810" srcset="Image/web/ananas-sec-13-small.webp 640w, Image/web/ananas-sec-13.webp 1200w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
       </div>
       <div class="row g-3">
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/Carotte_legumes.jpeg" alt="DK Bio – Galerie 1" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/carotte-legumes-14.webp" alt="Frische Karotten und Gemüse" loading="lazy" width="1280" height="835" srcset="Image/web/carotte-legumes-14-small.webp 640w, Image/web/carotte-legumes-14.webp 1280w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/Carotte_legumes_sec.jpeg" alt="DK Bio – Galerie 2" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/carotte-legumes-sec-15.webp" alt="Getrocknete Karotten und Gemüse" loading="lazy" width="768" height="512" srcset="Image/web/carotte-legumes-sec-15-small.webp 640w, Image/web/carotte-legumes-sec-15.webp 768w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/bananes sec.jpg" alt="DK Bio – Galerie 3" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/bananes-sec-16.webp" alt="Getrocknete Bananen" loading="lazy" width="612" height="408" decoding="async">
           </div>
         </div>
 
         <div class="col-12 col-md-6 col-xl-3">
           <div class="placeholder-photo ratio ratio-4x3 rounded-4 overflow-hidden">
-            <img src="Image/fruits-secs.jpeg" alt="DK Bio – Galerie 4" loading="lazy"
-              style="width:100%;height:100%;object-fit:cover;">
+            <img src="Image/web/fruits-secs-17.webp" alt="Auswahl getrockneter Früchte" loading="lazy" width="1280" height="686" srcset="Image/web/fruits-secs-17-small.webp 640w, Image/web/fruits-secs-17.webp 1280w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" decoding="async">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VIDÉO 
-  <section id="video" class="section">
-    <div class="container">
-      <h2 class="h1 mb-4" data-i18n="video.title">Vidéo de présentation</h2>
-      <p class="mb-4" data-i18n="video.desc">Découvrez notre histoire, nos valeurs et notre engagement envers une
-        alimentation durable.</p>
-      <div class="placeholder-photo ratio ratio-21x9" style="border:0;">
-        <video controls playsinline preload="metadata" class="w-100 h-100" style="object-fit:cover;">
-          <source src="Image/DK Bio-Video.mp4" type="video/webm" width="1280" height="1280">
-          <source src="Image/DK Bio-Video.mp4" type="video/mp4" width="1280" height="1280">
-          Votre navigateur ne supporte pas la vidéo HTML5.
-        </video>
-      </div>
-
-    </div>
-  </section>
-  -->
-
-
-  <!-- À PROPOS / DG -->
   <section id="about" class="section bg-soft">
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-5">
           <div class="placeholder-photo">
-            <img src="Image/DG.jpeg" height="700" width="700" alt="DK Bio – Logo" class="img-contain logo-dark" />
+            <img src="Image/web/dg-18.webp" height="1100" width="825" alt="Patricia Dongmo Donfack, Geschäftsführerin von DK Bio" class="img-contain logo-dark" srcset="Image/web/dg-18-small.webp 640w, Image/web/dg-18.webp 825w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="col-lg-7">
-          <h2 class="h1 mb-3" data-i18n="about.title">À propos de l'auteure / DG</h2>
-          <p data-i18n="about.text1">En tant que <strong> PDG de DK Bio</strong> , je représente une génération de
-            jeunes Africains déterminés à transformer le monde par l’innovation et la durabilité.
-            Mon parcours en affaires internationales m’a révélé l’urgence de solutions face au gaspillage alimentaire et
-            à la gestion des ressources au Cameroun.
-          </p>
-          <p data-i18n="about.text2"><strong>DK Bio est ma réponse :</strong> nous déshydratons fruits, légumes et
-            épices pour prolonger leur conservation, préserver leur valeur nutritive et soutenir
-            l’économie locale.
-          </p>
-          <p data-i18n="about.text3"><strong>Mon ambition est claire : </strong>faire de DK Bio un symbole d’ingéniosité
-            africaine, inspirer la jeunesse à entreprendre et à bâtir une Afrique plus autonome, tout en partageant
-            la richesse de nos produits avec le monde.
-          </p>
-          <p data-i18n="about.text4"><strong>Notre vision :</strong> réduire le gaspillage alimentaire, autonomiser les
-            communautés locales et partager la richesse des produits africains avec le monde.</p>
-          <p class="mb-0"><strong data-i18n="about.sigLabel">Signature :</strong> <span data-i18n="about.sig">Mme Dongmo
-              Donfack Patricia</span></p>
+          <h2 class="h1 mb-3">Über die Geschäftsführerin</h2>
+          <p>Als Geschäftsführerin von DK Bio vertrete ich eine Generation junger Menschen in Afrika, die mit Innovation und Nachhaltigkeit etwas verändern will. Meine Erfahrung im internationalen Geschäft hat mir gezeigt, wie dringend Kamerun Lösungen gegen Lebensmittelverschwendung und für einen besseren Umgang mit Ressourcen braucht.</p>
+          <p>DK Bio ist meine Antwort darauf. Wir trocknen Obst, Gemüse und Gewürze, um sie länger haltbar zu machen, ihren Nährwert zu erhalten und die lokale Wirtschaft zu unterstützen.</p>
+          <p>Ich möchte mit DK Bio zeigen, was afrikanischer Erfindergeist leisten kann, junge Menschen zum Gründen ermutigen und die Vielfalt unserer Produkte weltweit bekannt machen. Damit möchte ich zu einem eigenständigeren Afrika beitragen.</p>
+          <p>Unsere Vision ist es, Lebensmittelverschwendung zu verringern, lokale Gemeinschaften zu stärken und afrikanische Produkte weltweit bekannt zu machen.</p>
+          <p class="mb-0"><strong>Unterschrift:</strong> <span>Patricia Dongmo Donfack</span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / PIED DE PAGE -->
   <section id="contact" class="section">
     <div class="container">
       <div class="row g-4">
-        <!-- Contact Form -->
         <div class="col-lg-6">
           <div class="container my-4">
             <div class="card shadow-sm p-4">
-              <h1 class="mb-3">Kontakt</h1>
+              <h2 class="h1 mb-3">Kontakt</h2>
 
               <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-envelope-fill me-3 fs-4 text-primary"></i>
+                
                 <div>
-                  <strong>Email:</strong><br>
-                  <a href="mailto:harristane1@gmail.com">Contact.dkbio@gmail.com</a>
+                  <strong>E-Mail</strong><br>
+                  <a href="mailto:Contact.dkbio@gmail.com">Contact.dkbio@gmail.com</a>
                 </div>
               </div>
 
               <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-telephone-fill me-3 fs-4 text-success"></i>
+                
                 <div>
-                  <strong>Telefon:</strong><br>
-                  <a href="tel:+491234567890">+237 699 81 11 73</a>
+                  <strong>Telefon</strong><br>
+                  <a href="tel:+237699811173">+237 699 81 11 73</a>
                 </div>
               </div>
 
               <div class="d-flex align-items-start">
-                <i class="bi bi-geo-alt-fill me-3 fs-4 text-danger"></i>
+                
                 <div>
-                  <strong>Adresse:</strong>
-                  <br>Deido, Douala(Cameroun)
-                  <br>En face l’école le petit Monde
-                </div>
+                  <strong>Adresse</strong><div>Deido, Douala (Kamerun)<br>Gegenüber der Schule Le Petit Monde</div></div>
               </div>
 
             </div>
@@ -654,28 +518,25 @@
 
         </div>
 
-        <!-- Media & Downloads -->
         <div class="col-lg-6">
-          <h2 class="h1" data-i18n="media.title">Médias & téléchargements</h2>
-          <ul class="list-unstyled">
+          <h2 class="h1">Medien und Downloads</h2>
+          <ul class="list-unstyled download-links">
             <li>
-              <i class="bi bi-filetype-pdf me-1"></i>
-              <a href="Documents/DK BIO  brandbook.pdf (11).pdf" target="_blank" data-i18n="media.brandbook1">Brandbook
-                (PDF en Français)</a>
+              
+              <a href="Documents/DK%20BIO%20%20brandbook.pdf%20(11).pdf">Markenhandbuch (PDF, Französisch)</a>
             </li>
             <li>
-              <i class="bi bi-filetype-pdf me-1"></i>
-              <a href="Documents/DK BIO  brandbook.pdf (8).pdf" target="_blank" data-i18n="media.brandbook2">Brandbook
-                (PDF in Englisch)</a>
+              
+              <a href="Documents/DK%20BIO%20%20brandbook.pdf%20(8).pdf">Markenhandbuch (PDF, Englisch)</a>
             </li>
             <li>
-              <i class="bi bi-image me-1"></i>
-              <a href="Image/DK Bio Profile (2).svg" target="_blank" data-i18n="media.logo1">Logo </a>
+              
+              <a href="Image/DK%20Bio%20Profile%20(2).svg">DK-Bio-Logo (SVG)</a>
             </li>
 
           </ul>
           <div class="placeholder-photo mt-3">
-            <img src="Image/Team.jpeg" class="img-fluid rounded shadow" alt="DK Bio – Logo" />
+            <img src="Image/web/team-19.webp" class="img-fluid rounded shadow" alt="Das Team von DK Bio" width="825" height="1100" srcset="Image/web/team-19-small.webp 640w, Image/web/team-19.webp 825w" sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -684,26 +545,20 @@
 
 
 
-  <footer class="border-top py-4 small">
+  <section id="privacy" class="container pb-5">
+<h2 class="h4">Datenschutz</h2>
+<p>Diese Website speichert Ihre Farbauswahl im Browser. Wenn Sie DK Bio per E-Mail oder Telefon kontaktieren, verwenden Sie Ihre eigene Anwendung und entscheiden selbst, welche Informationen Sie mitteilen.</p>
+</section></main><footer class="border-top py-4 small">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
-      <div>&copy; <span id="year"></span> DK Bio. <span data-i18n="footer.rights">Tous droits réservés.</span></div>
+      <div>© <span id="year">2026</span> DK Bio. <span>Alle Rechte vorbehalten.</span></div>
       <div class="d-flex gap-3">
-        <a href="#home" class="link-secondary" data-i18n="footer.top">Haut de page</a>
-        <a href="#pricing" class="link-secondary" data-i18n="footer.prices">Tarifs</a>
-        <a href="#about" class="link-secondary" data-i18n="footer.about">À propos</a>
-      </div>
+        <a href="#home" class="link-secondary">Nach oben</a>
+        <a href="#pricing" class="link-secondary">Preise</a>
+        <a href="#about" class="link-secondary">Über uns</a>
+      <a href="#privacy" class="link-secondary">Datenschutz</a></div>
     </div>
   </footer>
 
-  <a href="#home" class="btn btn-primary rounded-circle p-3 shadow floating-cta" aria-label="Haut de page">
-    <i class="bi bi-arrow-up"></i>
-  </a>
-
-
-  <script src="script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+  <script src="interactions.js"></script></body>
 
 </html>
